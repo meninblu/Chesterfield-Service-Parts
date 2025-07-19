@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Parts Requisition Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #e6f3ff; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; table-layout: fixed; }
+    td, th { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    input, select { width: 100%; font-size: 16px; padding: 5px; }
+    button { padding: 10px 20px; font-size: 16px; }
+    th:nth-child(1), td:nth-child(1) { width: 65%; }
+    th:nth-child(2), td:nth-child(2) { width: 15%; }
+    th:nth-child(3), td:nth-child(3) { width: 20%; }
+  </style>
+</head>
+<body>
+  <div style="text-align: center; margin-bottom: 20px;">
+    <img src="CSI logo.png" alt="Chesterfield Service Logo" style="height:100px; margin-bottom:10px;">
+    <img src="CSI Banner.jpg" alt="Parts Order Banner" style="width:100%; max-width:800px; height:auto;"/>
+  </div>
+
+  <h2>Parts Requisition Form</h2>
+  <form id="partsForm">
+    <label for="techName"><strong>Tech Name:</strong></label>
+    <input id="techName" name="techName" required type="text" style="width: 300px; margin-bottom: 20px;" />
+
+    <datalist id="part-options">
+      <option value="1/2 SharkBite Coupling"></option>
+      <option value="3/4 PVC Elbow"></option>
+      <option value="1 Ball Valve"></option>
+    </datalist>
+
+    <table>
+      <tr><th>Part</th><th>Quantity</th><th>Notes</th></tr>
+      <!-- 10 input rows -->
+      
+<tr>
+  <td><input type="text" name="part0" list="part-options" /></td>
+  <td><input type="number" name="qty0" min="1" /></td>
+  <td><input type="text" name="notes0" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part1" list="part-options" /></td>
+  <td><input type="number" name="qty1" min="1" /></td>
+  <td><input type="text" name="notes1" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part2" list="part-options" /></td>
+  <td><input type="number" name="qty2" min="1" /></td>
+  <td><input type="text" name="notes2" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part3" list="part-options" /></td>
+  <td><input type="number" name="qty3" min="1" /></td>
+  <td><input type="text" name="notes3" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part4" list="part-options" /></td>
+  <td><input type="number" name="qty4" min="1" /></td>
+  <td><input type="text" name="notes4" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part5" list="part-options" /></td>
+  <td><input type="number" name="qty5" min="1" /></td>
+  <td><input type="text" name="notes5" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part6" list="part-options" /></td>
+  <td><input type="number" name="qty6" min="1" /></td>
+  <td><input type="text" name="notes6" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part7" list="part-options" /></td>
+  <td><input type="number" name="qty7" min="1" /></td>
+  <td><input type="text" name="notes7" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part8" list="part-options" /></td>
+  <td><input type="number" name="qty8" min="1" /></td>
+  <td><input type="text" name="notes8" /></td>
+</tr>
+
+
+<tr>
+  <td><input type="text" name="part9" list="part-options" /></td>
+  <td><input type="number" name="qty9" min="1" /></td>
+  <td><input type="text" name="notes9" /></td>
+</tr>
+
+    </table>
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+
+  <script>
+    function submitForm() {
+      const techName = document.getElementById('techName').value || '';
+      let body = `Tech Name: ${techName}\n\n`;
+      for (let i = 0; i < 10; i++) {
+        const part = document.querySelector('[name=part' + i + ']')?.value || '';
+        const qty = document.querySelector('[name=qty' + i + ']')?.value || '';
+        const notes = document.querySelector('[name=notes' + i + ']')?.value || '';
+        if (part || qty || notes) {
+          body += `Row ${i+1}: Part: ${part}, Qty: ${qty}, Notes: ${notes}\n`;
+        }
+      }
+      const mailto = `mailto:scottm@chesterfieldservice.com?subject=Parts Request Form&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
