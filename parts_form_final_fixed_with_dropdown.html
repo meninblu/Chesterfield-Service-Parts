@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Parts Requisition Form</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #e6f3ff; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; table-layout: fixed; }
+    td, th { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    input, select { width: 100%; font-size: 16px; padding: 5px; }
+    button { padding: 10px 20px; font-size: 16px; }
+    th:nth-child(1), td:nth-child(1) { width: 65%; }
+    th:nth-child(2), td:nth-child(2) { width: 15%; }
+    th:nth-child(3), td:nth-child(3) { width: 20%; }
+  </style>
+</head>
+<body>
+<div style="text-align: center; margin-bottom: 20px;">
+<img alt="Chesterfield Service Logo" src="CSI logo.png" style="height:100px; margin-bottom:10px;"/>
+<img alt="Parts Order Banner" src="CSI Banner.jpg" style="width:100%; max-width:800px; height:auto;">
+</img></div>
+<h2>Parts Requisition Form</h2>
+<form id="partsForm">
+<label for="techName"><strong>Tech Name:</strong></label>
+<input id="techName" name="techName" required="" style="width: 300px; margin-bottom: 20px;" type="text"/>
+<datalist id="part-options"><option value="1 1/2 DWV/PVC Male Adapter"></option><option value="1 1/2 DWV/PVC 90* Elbow"></option><option value="1 1/2 DWV/PVC Street 90* Elbow"></option><option value="2 DWV/PVC Coupling"></option><option value="3 DWV/PVC 90* Elbow"></option><option value="3/4 gas 90 street press"></option><option value="3/4 gas cap press"></option><option value="1/2 LF Sharkbite Coupling"></option><option value="1/2 SharkBite tee"></option><option value="Moen 1222B Cartridge (OEM)"></option><option value="Toilet Tank Trip Lever"></option><option value="Check Valve"></option><option value="Disposal Power Coard"></option><option value="Drop Cloths"></option><option value="1 Ball Valve"></option></datalist>
+<table>
+<tr><th>Part</th><th>Quantity</th><th>Notes</th></tr>
+<tr>
+<td><input list="part-options" name="part0" type="text"/></td>
+<td><input min="1" name="qty0" type="number"/></td>
+<td><input name="notes0" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part1" type="text"/></td>
+<td><input min="1" name="qty1" type="number"/></td>
+<td><input name="notes1" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part2" type="text"/></td>
+<td><input min="1" name="qty2" type="number"/></td>
+<td><input name="notes2" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part3" type="text"/></td>
+<td><input min="1" name="qty3" type="number"/></td>
+<td><input name="notes3" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part4" type="text"/></td>
+<td><input min="1" name="qty4" type="number"/></td>
+<td><input name="notes4" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part5" type="text"/></td>
+<td><input min="1" name="qty5" type="number"/></td>
+<td><input name="notes5" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part6" type="text"/></td>
+<td><input min="1" name="qty6" type="number"/></td>
+<td><input name="notes6" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part7" type="text"/></td>
+<td><input min="1" name="qty7" type="number"/></td>
+<td><input name="notes7" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part8" type="text"/></td>
+<td><input min="1" name="qty8" type="number"/></td>
+<td><input name="notes8" type="text"/></td>
+</tr>
+<tr>
+<td><input list="part-options" name="part9" type="text"/></td>
+<td><input min="1" name="qty9" type="number"/></td>
+<td><input name="notes9" type="text"/></td>
+</tr>
+</table>
+<button onclick="submitForm()" type="button">Submit</button>
+</form>
+<script>
+    function submitForm() {
+      const techName = document.getElementById('techName').value || '';
+      let body = `Tech Name: ${techName}\n\n`;
+      for (let i = 0; i < 10; i++) {
+        const part = document.querySelector('[name=part' + i + ']')?.value || '';
+        const qty = document.querySelector('[name=qty' + i + ']')?.value || '';
+        const notes = document.querySelector('[name=notes' + i + ']')?.value || '';
+        if (part || qty || notes) {
+          body += `Row ${i+1}: Part: ${part}, Qty: ${qty}, Notes: ${notes}\n`;
+        }
+      }
+      const mailto = `mailto:chrisk@chesterfieldservice.com,julier@chesterfieldservice.com?subject=Parts Request Form&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
