@@ -19,365 +19,61 @@
 <body style="background-color: #e6f3ff;">
 <div style="text-align: center; margin-bottom: 20px;">
 <img alt="Chesterfield Service Logo" src="CSI logo.png" style="height:100px; margin-bottom:10px;"/>
-<img alt="Parts Order Banner" src="CSI Banner.jpg" style="width:100%; max-width:800px; height:auto;">
-</img></div>
-
+<img alt="Parts Order Banner" src="CSI Banner.jpg" style="width:100%; max-width:800px; height:auto;"/>
+</div>
 <h2>Parts Requisition Form</h2>
 <form id="partsForm">
 <label for="techName"><strong>Tech Name:</strong></label>
-<input id="techName" name="techName" required="" style="width: 300px; margin-bottom: 20px;" type="text"/>
-<datalist id="part-options">
-<option value="1 1/2 DWV/PVC Male Adapter"></option>
-<option value="1 1/2 DWV/PVC 90* Elbow"></option>
-<option value="1 1/2 DWV/PVC Street 90* Elbow"></option>
-<option value="1 1/2 DWV/PVC Sanitary 45* Elbow"></option>
-<option value="1 1/2 DWV/PVC Sanitary Street 45* Elbow"></option>
-<option value="1 1/2 DWV/PVC 22 1/2* Elbow"></option>
-<option value="1 1/2 DWV/PVC Street 22 1/2* Elbow"></option>
-<option value="2 DWV/PVC Coupling"></option>
-<option value="2 x 1 1/2 DWV/PVC Reducing Coupling"></option>
-<option value="2 x 1 1/2 DWV/PVC Reducing Bushing"></option>
-<option value="(2 DWV/PVC 90* Elbow"></option>
-<option value="2 DWV/PVC Street 90* Elbow"></option>
-<option value="2 DWV/PVC Sanitary 45* Elbow"></option>
-<option value="2 DWV/PVC Street 45* Elbow"></option>
-<option value="2 DWV/PVC 22 1/2* Elbow"></option>
-<option value="2 DWV/PVC Street 22 1/2* Elbow"></option>
-<option value="3 DWV/PVC Coupling"></option>
-<option value="3 DWV/PVC 90* Elbow"></option>
-<option value="3 DWV/PVC Street 90* Elbow"></option>
-<option value="3 DWV/PVC Sanitary 45* Elbow"></option>
-<option value="3 DWV/PVC Sanitary Street 45* Elbow"></option>
-<option value="3 DWV/PVC 22 1/2* Elbow"></option>
-<option value="3 DWV/PVC Street 22 1/2* Elbow"></option>
-<option value="4 DWV/PVC Coupling"></option>
-<option value="4 DWV/PVC 90* Elbow"></option>
-<option value="4 DWV/PVC Street 90* Elbow"></option>
-<option value="4 DWV/PVC Sanitary 45* Elbow"></option>
-<option value="4 DWV/PVC Sanitary Street 45* Elbow"></option>
-<option value="4 DWV/PVC 22 1/2* Elbow"></option>
-<option value="4 DWV/PVC Street 22 1/2* Elbow"></option>
-<option value="3/4 gas 90 street press"></option>
-<option value="3/4 gas 45 press"></option>
-<option value="3/4 gas 45 street press"></option>
-<option value="3/4 gas coupling press"></option>
-<option value="3/4 gas teeb press"></option>
-<option value="3/4 gas cap press"></option>
-<option value="3/4 x 1/2 gas Tee press"></option>
-<option value="3/4 gas Male Adapter press"></option>
-<option value="3/4 gas Female Adapter press"></option>
-<option value="1/2 LF Sharkbite Coupling"></option>
-<option value="3/4 LF SharkBite Coupling"></option>
-<option value="1/2 SharkBite tee"></option>
-<option value="3/4 SharkBite Ball valve"></option>
-<option value="1/2 SharkBite Ball Valve"></option>
-<option value="1/2 SharkBite Cap"></option>
-<option value="3/4 SharkBite  Cap"></option>
-<option value="black iron 65-603 (1/2 Black Union)"></option>
-<option value="black iron 65-604 (3/4 Black Union)"></option>
-<option value="black iron 65-438 (3/4 x 1/2 Black Reducing Coupling)"></option>
-<option value="black iron 65-183 (1/2 Black 45* Elbow)"></option>
-<option value="black iron 65-413 (1/2 Black Coupling)"></option>
-<option value="black iron 65-253 (1/2 Black Tee)"></option>
-<option value="black iron 65-473 (1/2 Black Cap)"></option>
-<option value="black iron 65-103 (1/2 Black 90* Elbow)"></option>
-<option value="black iron 1/2 Black Iron st 90"></option>
-<option value="black iron 1/2 Black Iron St 45"></option>
-<option value="black iron 1/2 Black Iron Plug"></option>
-<option value="black iron 65-414 (3/4 Black Coupling)"></option>
-<option value="black iron 65-474 (3/4 Black Cap)"></option>
-<option value="black iron 65-184 (3/4 Black 45* Elbow)"></option>
-<option value="black iron 65-104 (3/4 Black 90* Elbow)"></option>
-<option value="black iron 3/4 Black Iron Plug"></option>
-<option value="black iron 3/4 Black Iron St 45"></option>
-<option value="black iron 3/4 Black Iron St 90"></option>
-<option value="black iron 1/2 x close nipple"></option>
-<option value="black iron 1/2 x 1-1/2 nipple"></option>
-<option value="black iron 1/2 x 2 nipple"></option>
-<option value="black iron 1/2 x 2-1/2 nipple"></option>
-<option value="black iron 1/2 x 3 nipple"></option>
-<option value="black iron 1/2 x 3-1/2 nipple"></option>
-<option value="black iron 1/2 x 4 nipple"></option>
-<option value="black iron 1/2 x 4-1/2 nipple"></option>
-<option value="black iron 1/2 x 5 nipple"></option>
-<option value="black iron 1/2 5-1/2 nipple"></option>
-<option value="black iron 1/2 x 6 nipple"></option>
-<option value="black iron 3/4 x close nipple"></option>
-<option value="black iron 3/4 x 1-1/2 nipple"></option>
-<option value="black iron 3/4 x 2 nipple"></option>
-<option value="black iron 3/4 x 2-1/2 nipple"></option>
-<option value="black iron 3/4 x 3 nipple"></option>
-<option value="black iron 3/4 x 3-1/2 nipple"></option>
-<option value="black iron 3/4 x 4 nipple"></option>
-<option value="black iron 3/4 x 4-1/2 nipple"></option>
-<option value="black iron 3/4 x 5 nipple"></option>
-<option value="black iron 3/4 x 5-1/2 nipple"></option>
-<option value="black iron 3/4 x 6 nipple"></option>
-<option value="1/2 x 10' Pex Pipe  (price/ft)"></option>
-<option value="3/4 x 10' Pex Pipe (price/ft)"></option>
-<option value="1 1/2 x 10' DWV/PVC Pipe (price/ft)"></option>
-<option value="2 x 10' DWV/PVC Pipe (price/ft)"></option>
-<option value="3 x 10' DWV/PVC Pipe (price/ft)"></option>
-<option value="1/2 x 10' Hard Copper Pipe (M)  (price/ft)"></option>
-<option value="3/4 x 10' Hard Copper Pipe (M)  (price/ft)"></option>
-<option value="1 x 10' Hard Copper Pipe (M) (price/ft)"></option>
-<option value="1 1/4 x 10' hard Copper Pipe (M) (price/ft)"></option>
-<option value="1/2 x 10'  Hard Copper (L) (price/ft)"></option>
-<option value="3/4 x 10' Hard Copper (L) (price/ft)"></option>
-<option value="1/4 x 50' (M) Humidifier Line (Box)"></option>
-<option value="Hose Bibb (6 19 Series Anti-Siphon Frost Proof Hydrant)"></option>
-<option value="Hose Bibb (8 19 Series Anti-Siphon Frost Proof Hydrant)"></option>
-<option value="Hose Bibb (10 19 Series Anti-Siphon Frost Proof Hydrant)"></option>
-<option value="Hose Bibb (12 19 Series Anti-Siphon Frost Proof Hydrent)"></option>
-<option value="Hose Bibb (14 19 Series Anti-Siphon Frost Proof Hydrent)"></option>
-<option value="Hose Bibb Hydrent Holder"></option>
-<option value="LF Hose Bibb Vacuum Breaker"></option>
-<option value="1/2 Gas Cock"></option>
-<option value="3/4 Gas Cock"></option>
-<option value="1/2 MIP Boiler Drain"></option>
-<option value="3/4 MIP Boiler Drain"></option>
-<option value="1/2 Ball Valve"></option>
-<option value="3/4 Ball Valve"></option>
-<option value="1 Ball Valve"></option>
-<option value="1/2 Ball Valve with waste"></option>
-<option value="3/4 Ball Valve with waste"></option>
-<option value="1 Ball Valve with waste"></option>
-<option value="Supply Line 20 Faucet Supply"></option>
-<option value="Supply Line 20 Toilet Supply"></option>
-<option value="Supply Line Male x Female Faucet Connector"></option>
-<option value="Supply Line Female x Female Faucet Connector"></option>
-<option value="Supply Line Ice Maker Line"></option>
-<option value="1/2 x  3/8  Qtr. Turn Straight Stop"></option>
-<option value="1/2 x 3/8 Qtr. Turn Angle Stop"></option>
-<option value="1/2  x 1/4 Qtr. Turn Angle Stop"></option>
-<option value="1/2 x 1/4 Qtr. Straight Stop"></option>
-<option value="1/2 x 3/8 Pex Angle Stop"></option>
-<option value="1/2 x 3/8 Pex Stright Stop"></option>
-<option value="1/2 CTS Split Chrome Escutcheon"></option>
-<option value="1 1/2 IPS Split White Escutcheon"></option>
-<option value="1/2 CTS Chrome Escutcheon"></option>
-<option value="1/2 IPS (3/4 CTS) Split Chrome Escutcheon"></option>
-<option value="1-1/2 in Escutcheon White"></option>
-<option value="3/4 PRV"></option>
-<option value="1 PRV"></option>
-<option value="Meter Valve (3/4 Main Shut off)"></option>
-<option value="Meter Valve (1 Main Shut Off)"></option>
-<option value="Moen Posi-Temp W/Stops"></option>
-<option value="T&amp;P (Temperature and Pressure Valve"></option>
-<option value="1 1/2 Master Trap"></option>
-<option value="1 1/2 PVC Double Slip Joint Extension Tube"></option>
-<option value="1 1/2 PVC Double Flange Tailpiece"></option>
-<option value="1 1/2 End Outlet Waste"></option>
-<option value="Mission Band (1 1/2 cast to Plastic x Plastic to Plastic CP150"></option>
-<option value="Mission Band (2 Cast to Plastic x Plastic to Plastic Cp200"></option>
-<option value="Mission Band  (3 cast toPL x PL Fernco Coupling)  P300"></option>
-<option value="Mission Band 4 PL to PL P400"></option>
-<option value="Mission Band 3 Cast To Plastic  CP33"></option>
-<option value="Mission Band 4 Cast to Plastic CP44"></option>
-<option value="Mission Band 2 Copper to Plastic  CK22"></option>
-<option value="Mission Band 1-1/2 CL PL ST to 1-1/2 K 1-1/4 Pl St CK115"></option>
-<option value="Mission Band 2 CI PL ST to 1-1/2 Pl St CP215"></option>
-<option value="No-Caulk Shower Drain Plastic"></option>
-<option value="Heavy Duty All Brass Chrome Pop-Up Assembly"></option>
-<option value="Push Button Pop Up Assembly Chrome"></option>
-<option value="Push Button Pop Up Assembly Brushed Nickel"></option>
-<option value="Deep Basket Strainer w/Brass Nuts"></option>
-<option value="Bar Sint Strainer"></option>
-<option value="Lift &amp; Turn Waste &amp; Overflow (PVC)"></option>
-<option value="1 1/2 x 1 1/4 Poly Beveled Slip Joint Washer"></option>
-<option value="1-1/4 Master Trap"></option>
-<option value="3 x 4 PVC TKO Flange"></option>
-<option value="1/2 Toilet Riser/Spacer"></option>
-<option value="Closet Flange Extension Kit"></option>
-<option value="Closet Bolt ( johnnie bolts )"></option>
-<option value="Extra Long Closet Bolts ( johnnie bolts )"></option>
-<option value="Jumbo Johni Wax Ring w/Horn"></option>
-<option value="Johni wax ring"></option>
-<option value="Red Korky Flapper"></option>
-<option value="3 Korky Universal Flapper"></option>
-<option value="Fluid Master Pro45 Fill  Valve"></option>
-<option value="Kohler Ball Flapper"></option>
-<option value="Fluidmaster Universal 3 Flapper"></option>
-<option value="Soft Trimable Wedge-It (10/bag)"></option>
-<option value="Kohler Canister Seal"></option>
-<option value="Mansfield Canister Seal"></option>
-<option value="2 in Universal Flapper With Float"></option>
-<option value="Toilet Tank Trip Lever"></option>
-<option value="Tank To Bowl Kit"></option>
-<option value="1 1/2 J-Hooks (50/box)"></option>
-<option value="2 J-Hooks (50/box)"></option>
-<option value="3 J-Hooks (50/box)"></option>
-<option value="1/2 talons"></option>
-<option value="3/4 Talons"></option>
-<option value="1 Talons"></option>
-<option value="Copper Strap"></option>
-<option value="Galvanized Strap"></option>
-<option value="1# Sterling Solder"></option>
-<option value="pipe dope sealant  (8 oz. Megaloc)"></option>
-<option value="14 oz. Plumber's Putty"></option>
-<option value="Oatey 8 oz. H-20 #95 Tinning Flux"></option>
-<option value="16 oz (Pint) Hercules Clear Primer"></option>
-<option value="16 oz (Pint) Hercules Purple Primer"></option>
-<option value="16 oz(Pint ) Hercules Medium Body/ Regular set Glue"></option>
-<option value="1/2 Regular Teflon Tape"></option>
-<option value="Simple Green"></option>
-<option value="Hand Wips"></option>
-<option value="Paper Towels"></option>
-<option value="Spray Bubbles"></option>
-<option value="Dabber Bottle  Bubbles"></option>
-<option value="Spray Foam"></option>
-<option value="Mesh Cloth"></option>
-<option value="Fluidmaster Dye Tabs"></option>
-<option value="1/4 Exterior Screws (box)"></option>
-<option value="2 1/2 Exterior Screws(box)"></option>
-<option value="2 1/2 Tapcon Screws (Box)"></option>
-<option value="1/4 Flue Screws (tub)"></option>
-<option value="1 Self Feed Screws (Tub)"></option>
-<option value="1/4 Anchor Kits (Box)"></option>
-<option value="Water Proof Shoe Covers (price/box of 40pr)"></option>
-<option value="Milwaukee Gloves (l) 600177 (XL)"></option>
-<option value="Drop Cloths"></option>
-<option value="3'x15' Runners"></option>
-<option value="Trash Bags  Commercial Grade"></option>
-<option value="Latex Gloves (Box)"></option>
-<option value="Clear Silicone"></option>
-<option value="White Silicone"></option>
-<option value="Water Test Kit"></option>
-<option value="M63 1/3HP Sump Pump"></option>
-<option value="M98 1/2HP Sump Pump"></option>
-<option value="Check Valve"></option>
-<option value="5 gallon Expansion tank"></option>
-<option value="2 gallon expansion tank"></option>
-<option value="Chrome Plated Tub Spout  Slip Fit"></option>
-<option value="Brushed nickel Tub Spout Slip Fit"></option>
-<option value="Moen 1224B Cartridge (OEM)"></option>
-<option value="Moen 1225B Cartridge (OEM)"></option>
-<option value="Moen  1222B Posi Temp Cartridge (OEM)"></option>
-<option value="Kohler Rite-Temp Mixing Cap for 1/2 in pressure balance cartridge"></option>
-<option value="Kohler Rite-Temp Mixing Cap for 1/2 in pressure balance valave"></option>
-<option value="Delta Tub Shower"></option>
-<option value="Delta Cartridge"></option>
-<option value="Pfister Ceramic Cartridge"></option>
-<option value="Moen Arbor Pull Down Brished Nickel"></option>
-<option value="Moen Brantford Pull Down Brushed Nickel"></option>
-<option value="Moen Integra Chrome"></option>
-<option value="Moen Integra BN"></option>
-<option value="Moen Chateau Tub/Shower Trim Kit"></option>
-<option value="Moen Brantford Tub/Shower Trim Kit"></option>
-<option value="Moen Posi-Temp Extension"></option>
-<option value="Moen Repair Plate"></option>
-<option value="Moen Chateau Single Handle Bathroom Faucet"></option>
-<option value="B-5 (Badger 5 Garbage Disposer)"></option>
-<option value="CNTR333 (ISE SS 3/4 HP Disposal)"></option>
-<option value="G11-010 (IDEAL #10 SS Hose Clamp)"></option>
-<option value="Disposal Power Coard"></option>
-<option value="Disposial elbow screw in"></option>
-<option value="Quick Mount"></option>
-<option value="orange wire nuts"></option>
-<option value="3/8 Romex Connectors"></option>
-<option value="Chrome Sink Hole Cover"></option>
-<option value="Brushed Nickel Sink Hole Cover"></option>
-<option value="Laundry box Male Thread W/Hammer Arrestor"></option>
-<option value="AA Mini Hammer Arrestors (Souix Chief)"></option>
-<option value="3/4 Dielectric union"></option>
-<option value="3/8 Brass Caps with Washer"></option>
-<option value="3/8 brass plug"></option>
-<option value="1/4 compression nut"></option>
-<option value="1/4 compression plug"></option>
-<option value="1/4 compression union"></option>
-<option value="3/8 compression union"></option>
-<option value="1/4 compression tee"></option>
-<option value="3/4 Solid Brass Caps"></option>
-<option value="3/4 pex rings"></option>
-<option value="1/2 pex rings"></option>
-<option value="3/4 90 pex"></option>
-<option value="1/2 90 pex"></option>
-<option value="3/4 tee pex"></option>
-<option value="1/2 tee pex"></option>
-<option value="1/2 x 1/2 x 3/4 tee pex"></option>
-<option value="3/4 x 1/2 x 3/4 tee pex"></option>
-<option value="3/4 x 3/4 x 1/2 tee pex"></option>
-<option value="3/4 x 1/2 x 1/2 tee pex"></option>
-<option value="3/4 Plug pex"></option>
-<option value="3/4 coupling pex"></option>
-<option value="1/2 coupling pex"></option>
-<option value="1/2 press pex to copper adapter"></option>
-<option value="3/4 Press pex to copper adapter"></option>
-<option value="3 x 24 flue Pipe"></option>
-<option value="4 x 24 Flue Pipe"></option>
-<option value="3 in Flue 90"></option>
-<option value="4 in Flue 90"></option>
-<option value="Sweat Male Adapter"></option>
-<option value="Sweat Male Adapter"></option>
-<option value="Sweat cap"></option>
-<option value="Sweat Tee"></option>
-<option value="Sweat 45 Street"></option>
-<option value="Sweat 45"></option>
-<option value="Sweat 90 Street"></option>
-<option value="Sweat 90"></option>
-<option value="Sweat Sleeve"></option>
-<option value="Sweat Coupling"></option>
-<option value="Sweat Ball Valve"></option>
-<option value="Sweat Male Adapter"></option>
-<option value="Sweat Female Adapter"></option>
-<option value="Sweat Cap"></option>
-<option value="Sweat Tee"></option>
-<option value="Sweat 45 Street"></option>
-<option value="Sweat 45"></option>
-<option value="Sweat 90"></option>
-<option value="Sweat Coupling"></option>
-<option value="Sweat Sleeve"></option>
-<option value="Sweat Ball Valve"></option>
-</datalist>
+<input id="techName" name="techName" required="" style="width: 300px; margin-bottom: 20px;" type="text"/><div style="display: flex; align-items: center; margin-bottom: 20px;"><label for="jobNumber" style="font-weight: bold; margin-right: 10px;">Job Number:</label><input id="jobNumber" name="jobNumber" style="width: 300px; margin-bottom: 20px;" type="text"/></div>
 <table>
 <tr><th>Part</th><th>Quantity</th><th>Notes</th></tr>
 <tr>
-<td><input list="part-options" name="part0" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="0" name="part0" type="text"/></td>
 <td><input min="1" name="qty0" type="number"/></td>
 <td><input name="notes0" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part1" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="1" name="part1" type="text"/></td>
 <td><input min="1" name="qty1" type="number"/></td>
 <td><input name="notes1" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part2" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="2" name="part2" type="text"/></td>
 <td><input min="1" name="qty2" type="number"/></td>
 <td><input name="notes2" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part3" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="3" name="part3" type="text"/></td>
 <td><input min="1" name="qty3" type="number"/></td>
 <td><input name="notes3" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part4" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="4" name="part4" type="text"/></td>
 <td><input min="1" name="qty4" type="number"/></td>
 <td><input name="notes4" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part5" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="5" name="part5" type="text"/></td>
 <td><input min="1" name="qty5" type="number"/></td>
 <td><input name="notes5" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part6" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="6" name="part6" type="text"/></td>
 <td><input min="1" name="qty6" type="number"/></td>
 <td><input name="notes6" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part7" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="7" name="part7" type="text"/></td>
 <td><input min="1" name="qty7" type="number"/></td>
 <td><input name="notes7" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part8" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="8" name="part8" type="text"/></td>
 <td><input min="1" name="qty8" type="number"/></td>
 <td><input name="notes8" type="text"/></td>
 </tr>
 <tr>
-<td><input list="part-options" name="part9" type="text"/></td>
+<td><input autocomplete="off" class="part-input" data-index="9" name="part9" type="text"/></td>
 <td><input min="1" name="qty9" type="number"/></td>
 <td><input name="notes9" type="text"/></td>
 </tr>
@@ -388,6 +84,8 @@
 function submitForm() {
   const techName = document.getElementById('techName').value || '';
   let body = `Tech Name: ${techName}\n\n`;
+  const jobNumber = document.getElementById("jobNumber").value || '';
+  body += `Job Number: ${jobNumber}\n`;
 
   for (let i = 0; i < 10; i++) {
     const part = document.querySelector(`[name=part${i}]`)?.value || '';
@@ -400,6 +98,48 @@ function submitForm() {
 
   const mailto = `mailto:chrisk@chesterfieldservice.com,julier@chesterfieldservice.com?subject=Parts Request Form&body=${encodeURIComponent(body)}`;
   window.location.href = mailto;
-}
-</script></body>
+}</script>
+<script>
+const partsList = ["1 1/2 DWV/PVC Male Adapter", "1 1/2 DWV/PVC 90* Elbow", "1 1/2 DWV/PVC Street 90* Elbow", "1 1/2 DWV/PVC Sanitary 45* Elbow", "1 1/2 DWV/PVC Sanitary Street 45* Elbow", "1 1/2 DWV/PVC 22 1/2* Elbow", "1 1/2 DWV/PVC Street 22 1/2* Elbow", "2 DWV/PVC Coupling", "2 x 1 1/2 DWV/PVC Reducing Coupling", "2 x 1 1/2 DWV/PVC Reducing Bushing", "(2 DWV/PVC 90* Elbow", "2 DWV/PVC Street 90* Elbow", "2 DWV/PVC Sanitary 45* Elbow", "2 DWV/PVC Street 45* Elbow", "2 DWV/PVC 22 1/2* Elbow", "2 DWV/PVC Street 22 1/2* Elbow", "3 DWV/PVC Coupling", "3 DWV/PVC 90* Elbow", "3 DWV/PVC Street 90* Elbow", "3 DWV/PVC Sanitary 45* Elbow", "3 DWV/PVC Sanitary Street 45* Elbow", "3 DWV/PVC 22 1/2* Elbow", "3 DWV/PVC Street 22 1/2* Elbow", "4 DWV/PVC Coupling", "4 DWV/PVC 90* Elbow", "4 DWV/PVC Street 90* Elbow", "4 DWV/PVC Sanitary 45* Elbow", "4 DWV/PVC Sanitary Street 45* Elbow", "4 DWV/PVC 22 1/2* Elbow", "4 DWV/PVC Street 22 1/2* Elbow", "3/4 gas 90 street press", "3/4 gas 45 press", "3/4 gas 45 street press", "3/4 gas coupling press", "3/4 gas teeb press", "3/4 gas cap press", "3/4 x 1/2 gas Tee press", "3/4 gas Male Adapter press", "3/4 gas Female Adapter press", "1/2 LF Sharkbite Coupling", "3/4 LF SharkBite Coupling", "1/2 SharkBite tee", "3/4 SharkBite Ball valve", "1/2 SharkBite Ball Valve", "1/2 SharkBite Cap", "3/4 SharkBite  Cap", "black iron 65-603 (1/2 Black Union)", "black iron 65-604 (3/4 Black Union)", "black iron 65-438 (3/4 x 1/2 Black Reducing Coupling)", "black iron 65-183 (1/2 Black 45* Elbow)", "black iron 65-413 (1/2 Black Coupling)", "black iron 65-253 (1/2 Black Tee)", "black iron 65-473 (1/2 Black Cap)", "black iron 65-103 (1/2 Black 90* Elbow)", "black iron 1/2 Black Iron st 90", "black iron 1/2 Black Iron St 45", "black iron 1/2 Black Iron Plug", "black iron 65-414 (3/4 Black Coupling)", "black iron 65-474 (3/4 Black Cap)", "black iron 65-184 (3/4 Black 45* Elbow)", "black iron 65-104 (3/4 Black 90* Elbow)", "black iron 3/4 Black Iron Plug", "black iron 3/4 Black Iron St 45", "black iron 3/4 Black Iron St 90", "black iron 1/2 x close nipple", "black iron 1/2 x 1-1/2 nipple", "black iron 1/2 x 2 nipple", "black iron 1/2 x 2-1/2 nipple", "black iron 1/2 x 3 nipple", "black iron 1/2 x 3-1/2 nipple", "black iron 1/2 x 4 nipple", "black iron 1/2 x 4-1/2 nipple", "black iron 1/2 x 5 nipple", "black iron 1/2 5-1/2 nipple", "black iron 1/2 x 6 nipple", "black iron 3/4 x close nipple", "black iron 3/4 x 1-1/2 nipple", "black iron 3/4 x 2 nipple", "black iron 3/4 x 2-1/2 nipple", "black iron 3/4 x 3 nipple", "black iron 3/4 x 3-1/2 nipple", "black iron 3/4 x 4 nipple", "black iron 3/4 x 4-1/2 nipple", "black iron 3/4 x 5 nipple", "black iron 3/4 x 5-1/2 nipple", "black iron 3/4 x 6 nipple", "1/2 x 10' Pex Pipe  (price/ft)", "3/4 x 10' Pex Pipe (price/ft)", "1 1/2 x 10' DWV/PVC Pipe (price/ft)", "2 x 10' DWV/PVC Pipe (price/ft)", "3 x 10' DWV/PVC Pipe (price/ft)", "1/2 x 10' Hard Copper Pipe (M)  (price/ft)", "3/4 x 10' Hard Copper Pipe (M)  (price/ft)", "1 x 10' Hard Copper Pipe (M) (price/ft)", "1 1/4 x 10' hard Copper Pipe (M) (price/ft)", "1/2 x 10'  Hard Copper (L) (price/ft)", "3/4 x 10' Hard Copper (L) (price/ft)", "1/4 x 50' (M) Humidifier Line (Box)", "Hose Bibb (6 19 Series Anti-Siphon Frost Proof Hydrant)", "Hose Bibb (8 19 Series Anti-Siphon Frost Proof Hydrant)", "Hose Bibb (10 19 Series Anti-Siphon Frost Proof Hydrant)", "Hose Bibb (12 19 Series Anti-Siphon Frost Proof Hydrent)", "Hose Bibb (14 19 Series Anti-Siphon Frost Proof Hydrent)", "Hose Bibb Hydrent Holder", "LF Hose Bibb Vacuum Breaker", "1/2 Gas Cock", "3/4 Gas Cock", "1/2 MIP Boiler Drain", "3/4 MIP Boiler Drain", "1/2 Ball Valve", "3/4 Ball Valve", "1 Ball Valve", "1/2 Ball Valve with waste", "3/4 Ball Valve with waste", "1 Ball Valve with waste", "Supply Line 20 Faucet Supply", "Supply Line 20 Toilet Supply", "Supply Line Male x Female Faucet Connector", "Supply Line Female x Female Faucet Connector", "Supply Line Ice Maker Line", "1/2 x  3/8  Qtr. Turn Straight Stop", "1/2 x 3/8 Qtr. Turn Angle Stop", "1/2  x 1/4 Qtr. Turn Angle Stop", "1/2 x 1/4 Qtr. Straight Stop", "1/2 x 3/8 Pex Angle Stop", "1/2 x 3/8 Pex Stright Stop", "1/2 CTS Split Chrome Escutcheon", "1 1/2 IPS Split White Escutcheon", "1/2 CTS Chrome Escutcheon", "1/2 IPS (3/4 CTS) Split Chrome Escutcheon", "1-1/2 in Escutcheon White", "3/4 PRV", "1 PRV", "Meter Valve (3/4 Main Shut off)", "Meter Valve (1 Main Shut Off)", "Moen Posi-Temp W/Stops", "T&P (Temperature and Pressure Valve", "1 1/2 Master Trap", "1 1/2 PVC Double Slip Joint Extension Tube", "1 1/2 PVC Double Flange Tailpiece", "1 1/2 End Outlet Waste", "Mission Band (1 1/2 cast to Plastic x Plastic to Plastic CP150", "Mission Band (2 Cast to Plastic x Plastic to Plastic Cp200", "Mission Band  (3 cast toPL x PL Fernco Coupling)  P300", "Mission Band 4 PL to PL P400", "Mission Band 3 Cast To Plastic  CP33", "Mission Band 4 Cast to Plastic CP44", "Mission Band 2 Copper to Plastic  CK22", "Mission Band 1-1/2 CL PL ST to 1-1/2 K 1-1/4 Pl St CK115", "Mission Band 2 CI PL ST to 1-1/2 Pl St CP215", "No-Caulk Shower Drain Plastic", "Heavy Duty All Brass Chrome Pop-Up Assembly", "Push Button Pop Up Assembly Chrome", "Push Button Pop Up Assembly Brushed Nickel", "Deep Basket Strainer w/Brass Nuts", "Bar Sint Strainer", "Lift & Turn Waste & Overflow (PVC)", "1 1/2 x 1 1/4 Poly Beveled Slip Joint Washer", "1-1/4 Master Trap", "3 x 4 PVC TKO Flange", "1/2 Toilet Riser/Spacer", "Closet Flange Extension Kit", "Closet Bolt ( johnnie bolts )", "Extra Long Closet Bolts ( johnnie bolts )", "Jumbo Johni Wax Ring w/Horn", "Johni wax ring", "Red Korky Flapper", "3 Korky Universal Flapper", "Fluid Master Pro45 Fill  Valve", "Kohler Ball Flapper", "Fluidmaster Universal 3 Flapper", "Soft Trimable Wedge-It (10/bag)", "Kohler Canister Seal", "Mansfield Canister Seal", "2 in Universal Flapper With Float", "Toilet Tank Trip Lever", "Tank To Bowl Kit", "1 1/2 J-Hooks (50/box)", "2 J-Hooks (50/box)", "3 J-Hooks (50/box)", "1/2 talons", "3/4 Talons", "1 Talons", "Copper Strap", "Galvanized Strap", "1# Sterling Solder", "pipe dope sealant  (8 oz. Megaloc)", "14 oz. Plumber's Putty", "Oatey 8 oz. H-20 #95 Tinning Flux", "16 oz (Pint) Hercules Clear Primer", "16 oz (Pint) Hercules Purple Primer", "16 oz(Pint ) Hercules Medium Body/ Regular set Glue", "1/2 Regular Teflon Tape", "Simple Green", "Hand Wips", "Paper Towels", "Spray Bubbles", "Dabber Bottle  Bubbles", "Spray Foam", "Mesh Cloth", "Fluidmaster Dye Tabs", "1/4 Exterior Screws (box)", "2 1/2 Exterior Screws(box)", "2 1/2 Tapcon Screws (Box)", "1/4 Flue Screws (tub)", "1 Self Feed Screws (Tub)", "1/4 Anchor Kits (Box)", "Water Proof Shoe Covers (price/box of 40pr)", "Milwaukee Gloves (l) 600177 (XL)", "Drop Cloths", "3'x15' Runners", "Trash Bags  Commercial Grade", "Latex Gloves (Box)", "Clear Silicone", "White Silicone", "Water Test Kit", "M63 1/3HP Sump Pump", "M98 1/2HP Sump Pump", "Check Valve", "5 gallon Expansion tank", "2 gallon expansion tank", "Chrome Plated Tub Spout  Slip Fit", "Brushed nickel Tub Spout Slip Fit", "Moen 1224B Cartridge (OEM)", "Moen 1225B Cartridge (OEM)", "Moen  1222B Posi Temp Cartridge (OEM)", "Kohler Rite-Temp Mixing Cap for 1/2 in pressure balance cartridge", "Kohler Rite-Temp Mixing Cap for 1/2 in pressure balance valave", "Delta Tub Shower", "Delta Cartridge", "Pfister Ceramic Cartridge", "Moen Arbor Pull Down Brished Nickel", "Moen Brantford Pull Down Brushed Nickel", "Moen Integra Chrome", "Moen Integra BN", "Moen Chateau Tub/Shower Trim Kit", "Moen Brantford Tub/Shower Trim Kit", "Moen Posi-Temp Extension", "Moen Repair Plate", "Moen Chateau Single Handle Bathroom Faucet", "B-5 (Badger 5 Garbage Disposer)", "CNTR333 (ISE SS 3/4 HP Disposal)", "G11-010 (IDEAL #10 SS Hose Clamp)", "Disposal Power Coard", "Disposial elbow screw in", "Quick Mount", "orange wire nuts", "3/8 Romex Connectors", "Chrome Sink Hole Cover", "Brushed Nickel Sink Hole Cover", "Laundry box Male Thread W/Hammer Arrestor", "AA Mini Hammer Arrestors (Souix Chief)", "3/4 Dielectric union", "3/8 Brass Caps with Washer", "3/8 brass plug", "1/4 compression nut", "1/4 compression plug", "1/4 compression union", "3/8 compression union", "1/4 compression tee", "3/4 Solid Brass Caps", "3/4 pex rings", "1/2 pex rings", "3/4 90 pex", "1/2 90 pex", "3/4 tee pex", "1/2 tee pex", "1/2 x 1/2 x 3/4 tee pex", "3/4 x 1/2 x 3/4 tee pex", "3/4 x 3/4 x 1/2 tee pex", "3/4 x 1/2 x 1/2 tee pex", "3/4 Plug pex", "3/4 coupling pex", "1/2 coupling pex", "1/2 press pex to copper adapter", "3/4 Press pex to copper adapter", "3 x 24 flue Pipe", "4 x 24 Flue Pipe", "3 in Flue 90", "4 in Flue 90", "Sweat Male Adapter", "Sweat Male Adapter", "Sweat cap", "Sweat Tee", "Sweat 45 Street", "Sweat 45", "Sweat 90 Street", "Sweat 90", "Sweat Sleeve", "Sweat Coupling", "Sweat Ball Valve", "Sweat Male Adapter", "Sweat Female Adapter", "Sweat Cap", "Sweat Tee", "Sweat 45 Street", "Sweat 45", "Sweat 90", "Sweat Coupling", "Sweat Sleeve", "Sweat Ball Valve"];
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".part-input").forEach(input => {
+    const wrapper = document.createElement("div");
+    wrapper.style.position = "relative";
+    input.parentNode.insertBefore(wrapper, input);
+    wrapper.appendChild(input);
+
+    const dropdown = document.createElement("div");
+    dropdown.className = "autocomplete-dropdown";
+    dropdown.style.cssText = "position: absolute; left: 100%; top: 0; width: max-content; white-space: nowrap; top: 100%; background: white; border: 1px solid #ccc; z-index: 10; max-height: 150px; overflow-y: auto; width: 100%; display: none;";
+    wrapper.appendChild(dropdown);
+
+    input.addEventListener("input", () => {
+      const value = input.value.toLowerCase();
+      dropdown.innerHTML = "";
+      if (!value) {
+        dropdown.style.display = "none";
+        return;
+      }
+      const matches = partsList.filter(part => part.toLowerCase().includes(value));
+      matches.forEach(part => {
+        const div = document.createElement("div");
+        div.textContent = part;
+        div.style.padding = "5px";
+        div.style.cursor = "pointer";
+        div.addEventListener("click", () => {
+          input.value = part;
+          dropdown.style.display = "none";
+        });
+        dropdown.appendChild(div);
+      });
+      dropdown.style.display = matches.length ? "block" : "none";
+    });
+
+    input.addEventListener("blur", () => {
+      setTimeout(() => dropdown.style.display = "none", 100);
+    });
+  });
+});</script>
+</body>
 </html>
