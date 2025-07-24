@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Parts Requisition Form</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; table-layout: fixed; }
+    td, th { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    input, select { width: 100%; font-size: 16px; padding: 5px; }
+    button { padding: 10px 20px; font-size: 16px; }
+    th:nth-child(1), td:nth-child(1) { width: 65%; }
+    th:nth-child(2), td:nth-child(2) { width: 15%; }
+    th:nth-child(3), td:nth-child(3) { width: 20%; }
+  </style>
+</head>
+<body style="background-color: #e6f3ff;">
+<div style="text-align: center; margin-bottom: 20px;">
+<img alt="Chesterfield Service Logo" src="CSI logo.png" style="height:100px; margin-bottom:10px;"/>
+<img alt="Parts Order Banner" src="CSI Banner.jpg" style="width:100%; max-width:800px; height:auto;"/>
+</div>
+<h2>Parts Requisition Form</h2>
+<form id="partsForm">
+<label for="techName"><strong>Tech Name:</strong></label>
+<input id="techName" name="techName" required="" style="width: 300px; margin-bottom: 20px;" type="text"/><div style="display: flex; align-items: center; margin-bottom: 20px;"><label for="jobNumber" style="font-weight: bold; margin-right: 10px;">Job Number:</label><input id="jobNumber" name="jobNumber" style="width: 300px; margin-bottom: 20px;" type="text"/></div>
+<table>
+<tr><th>Part</th><th>Quantity</th><th>Notes</th></tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="0" name="part0" type="text"/></td>
+<td><input min="1" name="qty0" type="number"/></td>
+<td><input name="notes0" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="1" name="part1" type="text"/></td>
+<td><input min="1" name="qty1" type="number"/></td>
+<td><input name="notes1" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="2" name="part2" type="text"/></td>
+<td><input min="1" name="qty2" type="number"/></td>
+<td><input name="notes2" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="3" name="part3" type="text"/></td>
+<td><input min="1" name="qty3" type="number"/></td>
+<td><input name="notes3" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="4" name="part4" type="text"/></td>
+<td><input min="1" name="qty4" type="number"/></td>
+<td><input name="notes4" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="5" name="part5" type="text"/></td>
+<td><input min="1" name="qty5" type="number"/></td>
+<td><input name="notes5" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="6" name="part6" type="text"/></td>
+<td><input min="1" name="qty6" type="number"/></td>
+<td><input name="notes6" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="7" name="part7" type="text"/></td>
+<td><input min="1" name="qty7" type="number"/></td>
+<td><input name="notes7" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="8" name="part8" type="text"/></td>
+<td><input min="1" name="qty8" type="number"/></td>
+<td><input name="notes8" type="text"/></td>
+</tr>
+<tr>
+<td><input autocomplete="off" class="part-input" data-index="9" name="part9" type="text"/></td>
+<td><input min="1" name="qty9" type="number"/></td>
+<td><input name="notes9" type="text"/></td>
+</tr>
+</table>
+<button onclick="submitForm()" type="button">Submit</button>
+</form>
+<script>
+function submitForm() {
+  const techName = document.getElementById('techName').value || '';
+  let body = `Tech Name: ${techName}\n\n`;
+  const jobNumber = document.getElementById("jobNumber").value || '';
+  body += `Job Number: ${jobNumber}\n`;
+
+  for (let i = 0; i < 10; i++) {
+    const part = document.querySelector(`[name=part${i}]`)?.value || '';
+    const qty = document.querySelector(`[name=qty${i}]`)?.value || '';
+    const notes = document.querySelector(`[name=notes${i}]`)?.value || '';
+    if (part || qty || notes) {
+      body += `Row ${i+1}: Part: ${part}, Qty: ${qty}, Notes: ${notes}\n`;
+    }
+  }
+
+  const mailto = `mailto:chrisk@chesterfieldservice.com,julier@chesterfieldservice.com?subject=Parts Request Form&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+}</script>
+<script>
+const partsList = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".part-input").forEach(input => {
+    const wrapper = document.createElement("div");
+    wrapper.style.position = "relative";
+    input.parentNode.insertBefore(wrapper, input);
+    wrapper.appendChild(input);
+
+    const dropdown = document.createElement("div");
+    dropdown.className = "autocomplete-dropdown";
+    dropdown.style.cssText = "position: absolute; left: 100%; top: 0; width: max-content; white-space: nowrap; top: 100%; background: white; border: 1px solid #ccc; z-index: 10; max-height: 150px; overflow-y: auto; width: 100%; display: none;";
+    wrapper.appendChild(dropdown);
+
+    input.addEventListener("input", () => {
+      const value = input.value.toLowerCase();
+      dropdown.innerHTML = "";
+      if (!value) {
+        dropdown.style.display = "none";
+        return;
+      }
+      const matches = partsList.filter(part => part.toLowerCase().includes(value));
+      matches.forEach(part => {
+        const div = document.createElement("div");
+        div.textContent = part;
+        div.style.padding = "5px";
+        div.style.cursor = "pointer";
+        div.addEventListener("click", () => {
+          input.value = part;
+          dropdown.style.display = "none";
+        });
+        dropdown.appendChild(div);
+      });
+      dropdown.style.display = matches.length ? "block" : "none";
+    });
+
+    input.addEventListener("blur", () => {
+      setTimeout(() => dropdown.style.display = "none", 100);
+    });
+  });
+});
+</script>
+</body>
+</html>
